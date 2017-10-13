@@ -1,0 +1,12 @@
+# конфигурция источника данных (DataSource)
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/manicure_studio
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
