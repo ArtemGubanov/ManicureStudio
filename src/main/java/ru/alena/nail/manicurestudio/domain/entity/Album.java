@@ -1,4 +1,4 @@
-package ru.alena.nail.manicurestudio.domain;
+package ru.alena.nail.manicurestudio.domain.entity;
 
 import javax.persistence.*;
 import java.util.List;
@@ -8,6 +8,8 @@ import java.util.List;
  *
  * @author Gubanov Artyom.
  */
+@Entity
+@Table(name = "album")
 public class Album extends DBObject {
 
     /**

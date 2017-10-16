@@ -1,4 +1,4 @@
-package ru.alena.nail.manicurestudio.domain;
+package ru.alena.nail.manicurestudio.domain.entity;
 
 import javax.persistence.*;
 
@@ -7,6 +7,8 @@ import javax.persistence.*;
  *
  * @author Gubanov Artyom.
  */
+@Entity
+@Table(name = "photo")
 public class Photo extends DBObject {
 
     /**

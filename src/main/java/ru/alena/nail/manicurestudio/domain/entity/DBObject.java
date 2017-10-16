@@ -1,10 +1,10 @@
-package ru.alena.nail.manicurestudio.domain;
+package ru.alena.nail.manicurestudio.domain.entity;
 
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
 /**
- * Базовый класс для всех доменных объектов, используемых для взаимодействия с БД
+ * Базовый класс всех доменных объектов, используемых для взаимодействия с БД
  *
  * @author Gubanov Artyom.
  */

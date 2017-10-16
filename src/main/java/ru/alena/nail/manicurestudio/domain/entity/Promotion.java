@@ -1,4 +1,4 @@
-package ru.alena.nail.manicurestudio.domain;
+package ru.alena.nail.manicurestudio.domain.entity;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -8,6 +8,8 @@ import java.util.Date;
  *
  * @author Gubanov Artyom.
  */
+@Entity
+@Table(name = "promotion")
 public class Promotion extends DBObject{
 
     /**
