@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 /**
- * Услуга
+ * Услуга, предоставляемая студией маникюра
  *
  * @author Gubanov Artyom.
  */
@@ -25,7 +25,6 @@ public class Service extends DBObject {
      */
     @Column(name = "name")
     private String name;
-
 
     /**
      * Описание услуги
