@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>AlenaNail</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css" th:href="@{css/style.css}"/>
+    </head>
+    <body>
+        <h1>Manicure Studio - AlenaNail</h1>
+        <br/>
+        <div th:replace="navBarTempate :: navbar(services)"></div>
+        <br clear="all"/>
+        <br clear="all"/>
+        <table>
+            <tr>
+                <th width="80">Услуга</th>
+                <th width="200">Описание</th>
+                <th width="50">Цена</th>
+            </tr>
+            <th:block th:each="service : ${allServices}">
+                <tr>
+                    <td th:text="${service.name}"/>
+                    <td th:text="${service.description}"/>
+                    <td th:text="${service.price}"/>
+                </tr>
+            </th:block>
+        </table>
+
+        <div th:replace="index :: footer"></div>
+    </body>
+</html>

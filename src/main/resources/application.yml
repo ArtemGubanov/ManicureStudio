@@ -1,12 +1,22 @@
-# конфигурция источника данных (DataSource)
 spring:
-  datasource:
+  datasource: # конфигурция источника данных (DataSource)
     url: jdbc:postgresql://localhost:5432/manicure_studio
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
-  jpa:
+  jpa: # конфигурация JPA
     show-sql: true
     hibernate:
       ddl-auto: none
+  resources:
+    chain:
+      strategy:
+        content:
+          enabled: true # включить стратегию версий содержимого
+          paths: / ** # список шаблонов, разделенных запятыми, для применения к стратегии версий
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/pages/
+#      suffix: .jsp
+
 

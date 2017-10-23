@@ -7,16 +7,18 @@
     <groupId>ru.alena.nail.manicurestudio</groupId>
     <artifactId>ManicureStudio</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <java.version>1.8</java.version>
+        <start-class>ru.alena.nail.manicurestudio.Application</start-class>
     </properties>
 
     <!-- Родительский проект для Spring Boot-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.7.RELEASE</version>
+        <version>1.5.3.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -27,9 +29,21 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- Делаем встроенный контейнер сервлетов provided зависимостью (следовательно, удалив его из war) -->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
         <!-- PostgresSQL -->
@@ -39,6 +53,21 @@
             <version>42.1.4</version>
         </dependency>
 
+        <!-- JSP -->
+
+        <!-- Механизм JSP Томката, который анализирует JSP файлы,
+       чтобы компилировать их в Java код, как сервлеты -->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.tomcat.embed</groupId>-->
+            <!--<artifactId>tomcat-embed-jasper</artifactId>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
 
     </dependencies>
 

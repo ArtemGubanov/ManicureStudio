@@ -4,12 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Класс запуска приложения
+ * Класс запуска приложения для SpringBoot.
+ * Данный клас наследуется от SpringBootServletInitializer для того,
+ * чтобы была возможность загружать приложение Spring, т.к. web.xml не используется
  *
  * @author Gubanov Artyom.
  */
 @SpringBootApplication // то же самое, что @Configuration @EnableAutoConfiguration @ComponentScan
-//@EnableAutoConfiguration
 public class Application {
 
     public static void main(String[] args) {
