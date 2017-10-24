@@ -51,3 +51,21 @@ th {
     background-color: #4CAF50;
     color: white;
 }
+
+body {
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+}
+
+ /*Class - contacts*/
+
+.contacts {
+    width: 250px;
+    margin-top :20px;
+    margin-bottom: 20px;
+}
+
+.contacts .item {
+    position: relative;
+    margin-bottom: 5px;
+}
