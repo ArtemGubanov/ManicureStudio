@@ -1,26 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>AlenaNail</title>
-        <link rel="stylesheet" type="text/css" href="../css/style.css" th:href="@{css/style.css}"/>
-    </head>
+    <head th:replace="mainTempate :: head"></head>
     <body>
-        <h1>Manicure Studio - AlenaNail</h1>
-        <br/>
-
-        <div th:replace="navBarTempate :: navbar(home)"></div>
-
-        <!--<ul class="nav">-->
-            <!--<li><a class="${liclass}" th:href="@{/}" href="#">Главная</a></li>-->
-            <!--<li><a th:href="@{/services}">Услуги</a></li>-->
-            <!--<li><a href="#">Акции</a></li>-->
-            <!--<li><a href="#">Фото</a></li>-->
-            <!--<li><a href="#">Контакты</a></li>-->
-        <!--</ul>-->
-
-        <p th:fragment="footer">
-            Test include footer fragment
-        </p>
+        <div th:replace="mainTempate :: headBody"></div>
+        <div th:replace="mainTempate :: navBar(home)"></div>
+        <div th:replace="mainTempate :: footer"></div>
     </body>
 </html>
