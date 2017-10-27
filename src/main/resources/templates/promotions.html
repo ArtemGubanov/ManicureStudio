@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+    <head th:replace="mainTempate :: head"></head>
+    <body>
+        <div th:replace="mainTempate :: headBody"></div>
+        <div th:replace="mainTempate :: navBar(promotions)"></div>
+        <p/>
+        <table>
+            <tr>
+                <th width="250">Акция</th>
+                <th width="50">Действует до:</th>
+            </tr>
+            <th:block th:each="promotion : ${currentPromotions}">
+                <tr>
+                    <td th:text="${promotion.name}"/>
+                    <td th:text="${promotion.end_date}"/>
+                </tr>
+            </th:block>
+        </table>
+        <div th:replace="mainTempate :: footer"></div>
+    </body>
+</html>

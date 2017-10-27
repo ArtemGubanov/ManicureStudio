@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+    <head th:replace="mainTempate :: head"></head>
+    <body>
+        <div th:replace="mainTempate :: headBody"></div>
+        <div th:replace="mainTempate :: navBar(photoGallery)"></div>
+        <!--<img th:src="${currentPhoto.photoLink}" width="640" height="480" id="img"> </img>-->
+        <div class="gallery">
+            <img class="photo" th:src="${currentPhoto.photoLink}" width="240" height="320" id="img"
+                 th:alt="${currentPhoto.comment}"> </img>
+            <div class="navGallery">
+                <a th:href="@{/photos/{currentPhotoId}/prevPhoto(currentPhotoId=${currentPhoto.id})}">prev</a>
+                <a th:href="@{/photos/{currentPhotoId}/nextPhoto(currentPhotoId=${currentPhoto.id})}">next</a>
+            </div>
+        </div>
+        <div th:replace="mainTempate :: footer"></div>
+    </body>
+</html>

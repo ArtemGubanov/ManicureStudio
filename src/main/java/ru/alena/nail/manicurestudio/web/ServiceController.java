@@ -37,6 +37,4 @@ public class ServiceController {
         return "serviceList";
     }
 
-
-
 }

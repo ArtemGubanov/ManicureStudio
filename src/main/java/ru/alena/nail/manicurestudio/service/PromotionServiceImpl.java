@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import ru.alena.nail.manicurestudio.domain.dao.PromotionRepository;
 import ru.alena.nail.manicurestudio.domain.entity.Promotion;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -38,12 +39,14 @@ public class PromotionServiceImpl implements PromotionService {
     }
 
     @Override
-    public List<Promotion> getAllPromotions() {
-        List<Promotion> promotions = promotionRepository.findAll();
-        if (promotions == null) {
-            LOGGER.warn("В БД не найдено ни одной акции");
+    public List<Promotion> getCurrentPromotions() {
+        Date currentDate = new Date();
+        System.out.println(currentDate);
+        List<Promotion> currentPromotions = promotionRepository.findCurrentPromotions(currentDate);
+        if (currentPromotions == null) {
+            LOGGER.warn("В БД не найдено ни одной текущей акции");
         }
-        return promotions;
+        return currentPromotions;
     }
 
     @Override

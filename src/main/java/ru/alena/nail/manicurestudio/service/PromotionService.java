@@ -20,11 +20,11 @@ public interface PromotionService {
     Promotion getPromotion(Long id);
 
     /**
-     * Получить список всех акций
+     * Получить список всех текущих акций
      *
-     * @return список всех акций
+     * @return список всех текущих акций
      */
-    List<Promotion> getAllPromotions();
+    List<Promotion> getCurrentPromotions();
 
     /**
      * Добавить новую акции

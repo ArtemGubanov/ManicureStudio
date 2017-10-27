@@ -5,7 +5,7 @@ import ru.alena.nail.manicurestudio.domain.entity.Photo;
 import java.util.List;
 
 /**
- * Интерфейс сервиса для фотографий, представленных на сайте студии маникюра
+ * Интерфейс сервиса для фотографий, представленных в галереи на сайте студии маникюра
  *
  * @author Gubanov Artyom.
  */

@@ -69,3 +69,13 @@ body {
     position: relative;
     margin-bottom: 5px;
 }
+
+/*Gallery*/
+.gallery {
+    margin-top :20px;
+    margin-bottom: 20px;
+}
+
+.navGallery {
+    margin-top: 5px;
+}
