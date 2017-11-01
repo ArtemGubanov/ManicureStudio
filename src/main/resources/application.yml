@@ -3,7 +3,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/manicure_studio
     username: postgres
     password: postgres
-    driver-class-name: org.postgresql.Driver
+    driver-class-roleName: org.postgresql.Driver
   jpa: # конфигурация JPA
     show-sql: true
     hibernate:
@@ -14,6 +14,10 @@ spring:
         content:
           enabled: true # включить стратегию версий содержимого
           paths: /** # список шаблонов, разделенных запятыми, для применения к стратегии версий
+security:  # конфигурция Spring Security
+  basic:
+    enabled: true # включить базовую аутентификацию - HTTP BASIC AUTH
+  sessions: stateless # политика создания сессий
 #  mvc:
 #    view:
 #      prefix: /WEB-INF/pages/

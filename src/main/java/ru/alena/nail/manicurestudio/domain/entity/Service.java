@@ -71,4 +71,14 @@ public class Service extends DBObject {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "Service{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                '}';
+    }
+
 }

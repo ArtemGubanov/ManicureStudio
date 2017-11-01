@@ -85,4 +85,15 @@ public class Photo extends DBObject {
         this.album = album;
     }
 
+    @Override
+    public String toString() {
+        return "Photo{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", comment='" + comment + '\'' +
+                ", photoLink='" + photoLink + '\'' +
+                ", album=" + album +
+                '}';
+    }
+
 }

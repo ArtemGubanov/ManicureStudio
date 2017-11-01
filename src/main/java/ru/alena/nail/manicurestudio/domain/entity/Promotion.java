@@ -10,7 +10,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "promotion")
-public class Promotion extends DBObject{
+public class Promotion extends DBObject {
 
     /**
      * Уникальный идентификатор акции
@@ -82,4 +82,14 @@ public class Promotion extends DBObject{
         this.end_date = end_date;
     }
 
+    @Override
+    public String toString() {
+        return "Promotion{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", start_date=" + start_date +
+                ", end_date=" + end_date +
+                '}';
+    }
 }
