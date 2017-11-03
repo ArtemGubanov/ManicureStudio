@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public void saveService(User user) {
+    public void saveUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         // Установим для данного пользователя одну роль - 'USER'
         Set<Role> roles = new HashSet<>();

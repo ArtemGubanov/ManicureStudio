@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import ru.alena.nail.manicurestudio.domain.entity.User;
 import ru.alena.nail.manicurestudio.service.UserService;
 
 /**
@@ -20,7 +21,7 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
-    public String registration(Model model) {
+    public String registration(User newUser, Model model) {
         return null;
     }
 

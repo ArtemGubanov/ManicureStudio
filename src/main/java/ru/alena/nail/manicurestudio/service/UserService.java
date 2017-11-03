@@ -14,7 +14,7 @@ public interface UserService {
      *
      * @param user новый или обновленный пользователь сайта
      */
-    void  saveService(User user);
+    void  saveUser(User user);
 
     /**
      * Получить пользователя по его username
