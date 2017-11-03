@@ -19,7 +19,7 @@ import ru.alena.nail.manicurestudio.service.UserDetailsServiceImpl;
  * @author Gubanov Artyom.
  */
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity// оключаем конфигурирование Spring Security по умолчанию и делаем этот класс конфигурацией
 @ComponentScan
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -35,6 +35,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin().permitAll()
                 .and()
                 .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll();
+//                .and()
+//                .httpBasic();
     }
 
     @Override

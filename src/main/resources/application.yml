@@ -14,10 +14,10 @@ spring:
         content:
           enabled: true # включить стратегию версий содержимого
           paths: /** # список шаблонов, разделенных запятыми, для применения к стратегии версий
-security:  # конфигурция Spring Security
-  basic:
-    enabled: true # включить базовую аутентификацию - HTTP BASIC AUTH
-  sessions: stateless # политика создания сессий
+#security:  # конфигурция Spring Security
+#  basic:
+#    enabled: true # включить базовую аутентификацию - HTTP BASIC AUTH
+#  sessions: stateless # политика создания сессий
 #  mvc:
 #    view:
 #      prefix: /WEB-INF/pages/

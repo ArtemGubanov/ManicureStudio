@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
     <head th:replace="mainTempate :: head"></head>
     <body>
         <div th:replace="mainTempate :: headBody"></div>
         <div th:replace="mainTempate :: navBar(home)"></div>
+        <div th:switch="${userRole}">
+            <p th:case="'ADMIN'">Вы зашли, как администратор сайта</p>
+            <p th:case="'USER'">Вы зашли, как зарегистрированный пользователь сайта</p>
+            <p th:case="*">Вы зашли, как незарегестрированный пльзователь</p>
+        </div>
         <div th:replace="mainTempate :: footer"></div>
     </body>
 </html>

@@ -12,8 +12,17 @@
             <li><a th:class="${activeTab == 'home'}? 'active' : null" th:href="@{/}">Главная</a></li>
             <li><a th:class="${activeTab == 'services'}? 'active' : null" th:href="@{/services}">Услуги</a></li>
             <li><a th:class="${activeTab == 'promotions'}? 'active' : null" th:href="@{/promotions}">Акции</a></li>
-            <li><a th:class="${activeTab == 'photoGallery'}? 'active' : null"  th:href="@{/photos}">Фото</a></li>
+            <li><a th:class="${activeTab == 'photoGallery'}? 'active' : null" th:href="@{/photos}">Фото</a></li>
             <li><a th:class="${activeTab == 'contacts'}? 'active' : null" th:href="@{/contacts}">Контакты</a></li>
+            <li class="right">
+                <a th:class="${activeTab == 'registration'}? 'active' : null" href="#/registration">Регистрация</a>
+            </li>
+            <li th:if="${#httpServletRequest.userPrincipal == null}" class="right">
+                <a th:class="${activeTab == 'login'}? 'active' : null" th:href="@{/login}">Войти</a>
+            </li>
+            <li th:unless="${#httpServletRequest.userPrincipal == null}" class="right">
+                <a th:class="${activeTab == 'logout'}? 'active' : null" th:href="@{/logout}">Выйти</a>
+            </li>
         </ul>
         <p th:fragment="footer">
             © 2017 AlenaNail

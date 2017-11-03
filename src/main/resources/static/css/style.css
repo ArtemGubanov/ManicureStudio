@@ -9,7 +9,11 @@ ul {
 }
 
 li {
-    float: left;
+    float: left ;
+}
+
+li.right {
+    float: right;
 }
 
 li a {
